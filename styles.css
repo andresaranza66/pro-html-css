@@ -113,3 +113,17 @@ body {
     
     
 }
+
+@media (max-width: 650px) {
+    .list-main-container {
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        width: 95%;
+        justify-content: space-around;
+        display: flex;
+        padding: 12px;
+        z-index: 100;
+        margin-left: 2.5%;
+    }
+}
