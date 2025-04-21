@@ -1,7 +1,8 @@
 
-
+const andresButton = document.getElementById('andres')
 const santiLink = document.getElementById('santi')
 const colombiaTouristContainer = document.getElementById('api-list')
+const andyList = document.getElementById('andy-list')
 
 function renderApi (){
     console.log('Mi hermanis es el mejor')
@@ -15,7 +16,17 @@ function renderApi (){
    
 }
 
+function renderList() {
+    const andresTeams = ['Envigado', 'Las Vegas', 'Chattanooga FC' ]
+    andresTeams.forEach(teams => {
+        console.log('Vas muy bien')
+        const printTeams = `<p class='andy-teams'>${teams}</p>`
+        andyList.innerHTML = andyList.innerHTML + printTeams
+})
+}
 santiLink.addEventListener('click', renderApi)
 
+
+andresButton.addEventListener('click', renderList)
 
 
