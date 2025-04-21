@@ -20,7 +20,28 @@ body {
     align-items: center;
     
 }
+.header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-sizing: border-box;
+}
 
+#email {    
+    border-radius: 20px;
+    border: 2px solid #D0F0C0;
+    
+}
+#email::placeholder {
+    color: #D0F0C0;
+    font-size: var(--sm);
+}
 .title {
     margin-top: 50px;
     display: flex;
@@ -93,7 +114,7 @@ body {
     list-style: none;
     
 }
-.list-container li {
+.list-container button {
     flex: 1;
     text-align: center;
 }
@@ -105,31 +126,51 @@ body {
     font-weight: bold;
 }
 
-.list-container a:hover {
-    color: #9ACD32;
-    border: 1px solid #D0F0C0 ;
-    border-radius: 16px;
-    padding: 3px 9px;
-    
-    
-}
-.footer {
-    margin-top: 20px;
-    position: fixed;
-    bottom: 10px;
-    height: 10px;
-    right: 10px;
-    display: flex;
-    padding: 10px;
-    z-index: 100;
 
-    font-size: var(--md);
+
+
+.api-list {
+    margin-top: 50px;
+    padding: 10px;
+    display: inline-block !important;
+    align-items: first baseline;
 }
+.p-js {
+    margin: 8px 12px 8px 12px;
+    text-decoration: none;
+    color: #ACE1AF;
+    font-size: var(--sm);
+}
+
 .holas{
     text-decoration: none;
     color: #ACE1AF;
     padding-left: 8px;
 
+}
+button {
+    border-radius: 20px;
+    margin: 5px 10px 5px 10px;
+    font-size: var(--sm);
+    color: #ACE1AF;
+    border: 1px solid #9ACD32;
+    background-color: transparent;
+}
+button:hover{
+    color: #9ACD32;
+    border: 1px solid #D0F0C0 ;
+    border-radius: 16px;
+    padding: 0 6px; 
+    cursor: pointer;
+}
+.label:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    .headers-links{
+       margin-left: 45px;
+    }
 }
 @media (max-width: 650px) {
     .list-main-container {
@@ -152,4 +193,9 @@ body {
         font-size: var(--sm);
      }
     
+}
+@media (max-width: 650px) {
+    .api-list {
+        margin-top: -85px;
+    }
 }
