@@ -45,7 +45,7 @@ async function anotherFunction (urlApi) {
         const products = await fetchData(`${API}/products`)
         console.log('product',products)
 
-        if(products.lenght = 0){
+        if(products.lenght == 0){
             colombiaTouristContainer.innerHTML = 'Empty items';
             return
         }
