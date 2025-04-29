@@ -19,8 +19,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+
     
 }
+
 .header {
     width: 100%;
     display: flex;
@@ -34,6 +37,7 @@ body {
     box-sizing: border-box;
     z-index: 1000;
     
+    animation: upMove 0.5s ease-in;
 }
 
 #email {    
@@ -41,10 +45,12 @@ body {
     border: 2px solid #D0F0C0;
     
 }
+
 #email::placeholder {
     color: #D0F0C0;
     font-size: var(--sm);
 }
+
 .title {
     margin-top: 50px;
     display: flex;
@@ -61,6 +67,7 @@ body {
     display: flex;
     align-items: center;
 }
+
 .main-container-a{
     display: flex;
     justify-content: center;
@@ -71,6 +78,7 @@ body {
     max-width: 800px;
     margin-bottom: 200px;
 }
+
 .main-container-a p {
     max-width: 200px;
     padding: 3px 9px;
@@ -81,6 +89,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 .img-container p  {
     color: white;
     font-weight: bold;
@@ -88,6 +97,7 @@ body {
     align-items: center;
     max-width: 100px;
 }
+
 .img-container img {
     height: 100px;
     width: 100px;
@@ -95,6 +105,7 @@ body {
     border-radius: 20%;
     position: absolute;
 }
+
 .list-main-container {
     border: 1px solid #9ACD32;
     border-radius: 50px ;
@@ -117,10 +128,12 @@ body {
     list-style: none;
     
 }
+
 .list-container button {
     flex: 1;
     text-align: center;
 }
+
 .list-container a {
     margin: 0 12px 0 12px;
     text-decoration: none;
@@ -128,9 +141,6 @@ body {
     font-size: var(--md);
     font-weight: bold;
 }
-
-
-
 
 .api-list {
     margin-top: 50px;
@@ -140,6 +150,7 @@ body {
     color: #ACE1AF;
     font-size: var(--lg);
 }
+
 .p-js {
     margin: 8px 12px 8px 12px;
     text-decoration: none;
@@ -155,6 +166,7 @@ button {
     border: 1px solid #9ACD32;
     background-color: transparent;
 }
+
 button:hover{
     color: #9ACD32;
     border: 1px solid #D0F0C0 ;
@@ -162,9 +174,11 @@ button:hover{
     padding: 0 6px; 
     cursor: pointer;
 }
+
 .label:hover {
     cursor: pointer;
 }
+
 .andy-list{
     position: fixed;
     bottom: 2px;
@@ -178,6 +192,7 @@ button:hover{
     position: absolute;
     color: #ACE1AF;
 }
+
 .holas{
     display: inline-block;
     text-decoration: none;
@@ -190,6 +205,35 @@ button:hover{
 .holas:hover {
     transform: translateY(5px);
 }
+
+#lore-section {
+    width: 75%;
+    display: none;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50px;
+    z-index: 200;
+    justify-items: center;
+    position: fixed;
+    box-shadow:  0 10px 20px rgba(0,0,0,.4);
+    background-color: #ffffff;
+    animation: loreApperance 1.2s ease-in;
+    top: 35%;
+    
+}
+.h2-hidden {
+    align-items: center;
+    margin-bottom: 20px;
+}
+#lore-section img {
+    display: block;
+    margin: px;
+    width: 300px;
+    margin-top: 10px;
+    height: auto;
+    border-radius: 20px;
+}
+
 @media (max-width: 650px) {
     .headers-links{
        margin-left: 45px;
@@ -204,7 +248,6 @@ button:hover{
         justify-content: space-around;
         display: flex;
         padding: 12px;
-        z-index: 100;
         margin-left: 2.5%;
         margin-bottom: 12px;
     }
@@ -219,5 +262,28 @@ button:hover{
         font-size: 10px;
         margin-top: 8px
     }
+    .holas:hover {
+        transform: translateX(10px);
+    }
 }
 
+@keyframes upMove {
+    0% {
+      transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes loreApperance {
+    0% {
+        transform: translate(-150px);
+    }
+    80% {
+        transform: translate(30px);
+    }
+    100% {
+        transform: translateX(0)
+    }
+}

@@ -7,12 +7,15 @@ const santiLink = document.getElementById('santi')
 const colombiaTouristContainer = document.getElementById('api-list')
 const andyList = document.getElementById('andy-list')
 const juliCall = document.getElementById('juli')
+const loreCall = document.getElementById('lore')
+const loreSection = document.getElementById('lore-section')
+
+const bodyNone = document.getElementById('body')
 
 
 function renderApi (){
     console.log('Mi hermanis es el mejor')
     const colombiaTourist = [1, 2, 3, 4]
-    // TODO how to clesn the inner html before init
     colombiaTouristContainer.innerHTML = ''
     colombiaTourist.forEach(numbers => {
         console.log(numbers)
@@ -45,7 +48,7 @@ async function anotherFunction (urlApi) {
         const products = await fetchData(`${API}/products`)
         console.log('product',products)
 
-        if(products.lenght == 0){
+        if(products.length == 0){
             colombiaTouristContainer.innerHTML = 'Empty items';
             return
         }
@@ -62,7 +65,16 @@ async function anotherFunction (urlApi) {
 }
 }
 
+function hiddenSection() {
+    console.log(loreSection.style.display)
+    if (loreSection.style.display === "none" || loreSection.style.display === "") {
+        loreSection.style.display = "block"; 
+    } else {
+        loreSection.style.display = "none"; 
+    }
+}
 
+loreCall.addEventListener('click', hiddenSection)
 juliCall.addEventListener('click', () => anotherFunction(API))
 santiLink.addEventListener('click', renderApi)
 andresButton.addEventListener('click', renderList)
